@@ -113,7 +113,8 @@ TestingData &lt;- read.csv(url(TestingLocation), na.strings=c(&quot;NA&quot;,&qu
 <div id="cleaning-data" class="section level3">
 <h3>Cleaning data</h3>
 <pre class="r"><code># 1. Remove columns that containes more then &gt; 95% of  NAs
-TrainingData&lt;-TrainingData[ , ! apply(TrainingData , 2 , function(x) sum(is.na(x))/nrow(TrainingData) &gt;0.95)]
+TrainingData&lt;-TrainingData[ , ! apply(TrainingData , 2 , function(x)
+        sum(is.na(x))/nrow(TrainingData) &gt;0.95)]
 
 # 2. Remove first seven columns that are not relevant for the model (user names, IDs, window).
 TrainingData &lt;- subset(TrainingData, select = -c(1:7) )
@@ -249,7 +250,8 @@ confusionMatrix(SecondModelPred, SubTesting$classe)</code></pre>
 <div id="predict-20-different-test-cases" class="section level3">
 <h3>Predict 20 different test cases</h3>
 <pre class="r"><code># 1. Remove columns that containes more then &gt; 95% of  NAs
-TestingData&lt;-TestingData[ , ! apply(TestingData , 2 , function(x) sum(is.na(x))/nrow(TestingData) &gt;0.95)]
+TestingData&lt;-TestingData[ , ! apply(TestingData , 2 , function(x)
+      sum(is.na(x))/nrow(TestingData) &gt;0.95)]
 # 2. Remove first seven columns that are not relevant for the model (user names, IDs, window).
 TestingData &lt;- subset(TestingData, select = -c(1:7) )
 dim(TestingData)</code></pre>
