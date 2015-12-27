@@ -1,47 +1,328 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Machine-learning by olb1605</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Machine-learning</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/olb1605/Machine-Learning" class="btn">View on GitHub</a>
-      <a href="https://github.com/olb1605/Machine-Learning/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/olb1605/Machine-Learning/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Machine-learning</h1>
+        <p></p>
 
-    <section class="main-content">
-      <p><strong>Background</strong></p>
+        <p class="view"><a href="https://github.com/olb1605/Machine-Learning">View the Project on GitHub <small>olb1605/Machine-Learning</small></a></p>
 
-<p>Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. These type of devices are part of the quantified self movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. In this project, your goal will be to use data from accelerometers on the belt, forearm, arm, and dumbbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. More information is available from the website here: <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a> (see the section on the Weight Lifting Exercise Dataset).</p>
 
-<p><strong>Data</strong></p>
+        <ul>
+          <li><a href="https://github.com/olb1605/Machine-Learning/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/olb1605/Machine-Learning/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/olb1605/Machine-Learning">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p></p>
 
-<p>The training data for this project are available here: <a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv</a> The test data are available here: <a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv</a> The data for this project come from this source: <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a>. If you use the document you create for this class for any purpose please cite them as they have been very generous in allowing their data to be used for this kind of assignment.</p>
+<p></p>
 
-<p><strong>What you should submit</strong></p>
+<h3>
+<a id="background" class="anchor" href="#background" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background</h3>
 
-<p>The goal of your project is to predict the manner in which they did the exercise. This is the “classe” variable in the training set. You may use any of the other variables to predict with. You should create a report describing how you built your model, how you used cross validation, what you think the expected out of sample error is, and why you made the choices you did. You will also use your prediction model to predict 20 different test cases.</p>
+<p>Using devices such as Jawbone Up, Nike FuelBand, and Fitbit it is now possible to collect a large amount of data about personal activity relatively inexpensively. These type of devices are part of the quantified self movement - a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. One thing that people regularly do is quantify how much of a particular activity they do, but they rarely quantify how well they do it. In this project, your goal will be to use data from accelerometers on the belt, forearm, arm, and dumbbell of 6 participants. They were asked to perform barbell lifts correctly and incorrectly in 5 different ways. More information is available from the website here: <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a> (see the section on the Weight Lifting Exercise Dataset). </p>
 
-<p>Your submission should consist of a link to a Github repo with your R markdown and compiled HTML file describing your analysis. Please constrain the text of the writeup to &lt; 2000 words and the number of figures to be less than 5. It will make it easier for the graders if you submit a repo with a gh-pages branch so the HTML page can be viewed online (and you always want to make it easy on graders :-).
-You should also apply your machine learning algorithm to the 20 test cases available in the test data above. Please submit your predictions in appropriate format to the programming assignment for automated grading. See the programming assignment for additional details.</p>
+<h3>
+<a id="data" class="anchor" href="#data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data</h3>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/olb1605/Machine-Learning">Machine-learning</a> is maintained by <a href="https://github.com/olb1605">olb1605</a>.</span>
+<p>The training data for this project are available here: 
+<a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv</a>
+The test data are available here: 
+<a href="https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv">https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv</a>
+The data for this project come from this source: <a href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a>. If you use the document you create for this class for any purpose please cite them as they have been very generous in allowing their data to be used for this kind of assignment. </p>
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+<h3>
+<a id="what-you-should-submit" class="anchor" href="#what-you-should-submit" aria-hidden="true"><span class="octicon octicon-link"></span></a>What you should submit</h3>
+
+<p>The goal of your project is to predict the manner in which they did the exercise. This is the “classe” variable in the training set. You may use any of the other variables to predict with. You should create a report describing how you built your model, how you used cross validation, what you think the expected out of sample error is, and why you made the choices you did. You will also use your prediction model to predict 20 different test cases. </p>
+
+<ol>
+<li>Your submission should consist of a link to a Github repo with your R markdown and compiled HTML file describing your analysis. Please constrain the text of the writeup to &lt; 2000 words and the number of figures to be less than 5. It will make it easier for the graders if you submit a repo with a gh-pages branch so the HTML page can be viewed online (and you always want to make it easy on graders :-).</li>
+<li>You should also apply your machine learning algorithm to the 20 test cases available in the test data above. Please submit your predictions in appropriate format to the programming assignment for automated grading. See the programming assignment for additional details. </li>
+</ol>
+
+<h3>
+<a id="reproduceability" class="anchor" href="#reproduceability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reproduceability</h3>
+
+<p>The code should be run with the random seed 1231. Necessary packages for the model are listed below.</p>
+
+<pre><code>library(caret)
+</code></pre>
+
+<pre><code>## Warning: package 'caret' was built under R version 3.2.3
+</code></pre>
+
+<pre><code>## Loading required package: lattice
+## Loading required package: ggplot2
+</code></pre>
+
+<pre><code>library(rpart)
+library(rpart.plot)
+</code></pre>
+
+<pre><code>## Warning: package 'rpart.plot' was built under R version 3.2.3
+</code></pre>
+
+<pre><code>library(randomForest)
+</code></pre>
+
+<pre><code>## Warning: package 'randomForest' was built under R version 3.2.3
+</code></pre>
+
+<pre><code>## randomForest 4.6-12
+## Type rfNews() to see new features/changes/bug fixes.
+</code></pre>
+
+<pre><code>set.seed(1231)
+</code></pre>
+
+<h3>
+<a id="loading-data" class="anchor" href="#loading-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loading data</h3>
+
+<p>Load Training and Test data sets from web. Note: if files were previously saved in the relevant project, commented code can be used to load the data faster.</p>
+
+<pre><code>TrainingLocation &lt;- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv"
+TrainingData &lt;- read.csv(url(TrainingLocation), na.strings=c("NA","#DIV/0!",""))
+
+TestingLocation &lt;- "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
+TestingData &lt;- read.csv(url(TestingLocation), na.strings=c("NA","#DIV/0!",""))
+
+##To use this if files are saved in the project (faster variant)
+
+#TrainingData &lt;- read.csv("pml-training.csv", na.strings=c("NA","#DIV/0!",""))
+#TestingData &lt;- read.csv("pml-testing.csv", na.strings=c("NA","#DIV/0!",""))
+</code></pre>
+
+<h3>
+<a id="cleaning-data" class="anchor" href="#cleaning-data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cleaning data</h3>
+
+<pre><code># 1. Remove columns that containes more then &gt; 95% of  NAs
+TrainingData&lt;-TrainingData[ , ! apply(TrainingData , 2 , function(x)
+        sum(is.na(x))/nrow(TrainingData) &gt;0.95)]
+
+# 2. Remove first seven columns that are not relevant for the model (user names, IDs, window).
+TrainingData &lt;- subset(TrainingData, select = -c(1:7) )
+dim(TrainingData)
+</code></pre>
+
+<pre><code>## [1] 19622    53
+</code></pre>
+
+<p>The number of variables reduced from 160 to 53.</p>
+
+<h3>
+<a id="training-data-set-split-for-cross-validation" class="anchor" href="#training-data-set-split-for-cross-validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Training data set split for cross validation</h3>
+
+<p>Data split - 60% of training set data to built a model, and 40% to test the model</p>
+
+<pre><code>train &lt;- createDataPartition(y=TrainingData$classe,p=.60,list=FALSE)
+SubTraining &lt;- TrainingData[train,]
+SubTesting &lt;- TrainingData[-train,]
+dim(SubTraining); dim(SubTesting)
+</code></pre>
+
+<pre><code>## [1] 11776    53
+</code></pre>
+
+<pre><code>## [1] 7846   53
+</code></pre>
+
+<h3>
+<a id="first-variant---decision-tree" class="anchor" href="#first-variant---decision-tree" aria-hidden="true"><span class="octicon octicon-link"></span></a>First variant - Decision Tree</h3>
+
+<pre><code># Grow the tree
+FirstModel &lt;- rpart(classe ~ ., data=SubTraining, method="class")
+
+# Plot of the Decision Tree
+rpart.plot(FirstModel, main="First Variant - decision tree", extra=100, under=TRUE, faclen=0)
+</code></pre>
+
+<p><img alt="plot of chunk unnamed-chunk-5"> </p>
+
+<pre><code># Predict based on the decision tree
+FirstModelPred &lt;- predict(FirstModel, SubTesting, type = "class")
+
+# Test the result using testing subset
+confusionMatrix(FirstModelPred, SubTesting$classe)
+</code></pre>
+
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction    A    B    C    D    E
+##          A 1943  238   37   63   36
+##          B  107 1010  199  140  174
+##          C   49  109 1018  180  159
+##          D   97  113   81  839  132
+##          E   36   48   33   64  941
+## 
+## Overall Statistics
+##                                          
+##                Accuracy : 0.733          
+##                  95% CI : (0.723, 0.7427)
+##     No Information Rate : 0.2845         
+##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16      
+##                                          
+##                   Kappa : 0.6618         
+##  Mcnemar's Test P-Value : &lt; 2.2e-16      
+## 
+## Statistics by Class:
+## 
+##                      Class: A Class: B Class: C Class: D Class: E
+## Sensitivity            0.8705   0.6653   0.7442   0.6524   0.6526
+## Specificity            0.9334   0.9020   0.9233   0.9355   0.9717
+## Pos Pred Value         0.8386   0.6196   0.6719   0.6648   0.8387
+## Neg Pred Value         0.9477   0.9183   0.9447   0.9321   0.9255
+## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
+## Detection Rate         0.2476   0.1287   0.1297   0.1069   0.1199
+## Detection Prevalence   0.2953   0.2077   0.1931   0.1608   0.1430
+## Balanced Accuracy      0.9020   0.7837   0.8337   0.7940   0.8122
+</code></pre>
+
+<p>Confusion matrix shows that the first model - decision tree can predict classes with accuracy 0.733, confidence interval 95%: 0.723,07427. Due to the fact that there are quite a lot of variables the random forest variant could be a better fit. </p>
+
+<h3>
+<a id="second-variant---random-forest" class="anchor" href="#second-variant---random-forest" aria-hidden="true"><span class="octicon octicon-link"></span></a>Second variant - Random forest</h3>
+
+<pre><code># Build random forest model
+SecondModel &lt;- randomForest(classe ~. , data=SubTraining, method="class")
+print(SecondModel)
+</code></pre>
+
+<pre><code>## 
+## Call:
+##  randomForest(formula = classe ~ ., data = SubTraining, method = "class") 
+##                Type of random forest: classification
+##                      Number of trees: 500
+## No. of variables tried at each split: 7
+## 
+##         OOB estimate of  error rate: 0.7%
+## Confusion matrix:
+##      A    B    C    D    E class.error
+## A 3343    4    0    0    1 0.001493429
+## B   11 2261    7    0    0 0.007898201
+## C    0   19 2032    3    0 0.010710808
+## D    0    0   27 1900    3 0.015544041
+## E    0    0    3    5 2157 0.003695150
+</code></pre>
+
+<pre><code># Predict based on the SecondModel
+SecondModelPred &lt;- predict(SecondModel, SubTesting, type = "class")
+
+# Test the result using testing subset
+confusionMatrix(SecondModelPred, SubTesting$classe)
+</code></pre>
+
+<pre><code>## Confusion Matrix and Statistics
+## 
+##           Reference
+## Prediction    A    B    C    D    E
+##          A 2232    9    0    0    0
+##          B    0 1500    7    0    0
+##          C    0    9 1360   11    1
+##          D    0    0    1 1274    4
+##          E    0    0    0    1 1437
+## 
+## Overall Statistics
+##                                          
+##                Accuracy : 0.9945         
+##                  95% CI : (0.9926, 0.996)
+##     No Information Rate : 0.2845         
+##     P-Value [Acc &gt; NIR] : &lt; 2.2e-16      
+##                                          
+##                   Kappa : 0.9931         
+##  Mcnemar's Test P-Value : NA             
+## 
+## Statistics by Class:
+## 
+##                      Class: A Class: B Class: C Class: D Class: E
+## Sensitivity            1.0000   0.9881   0.9942   0.9907   0.9965
+## Specificity            0.9984   0.9989   0.9968   0.9992   0.9998
+## Pos Pred Value         0.9960   0.9954   0.9848   0.9961   0.9993
+## Neg Pred Value         1.0000   0.9972   0.9988   0.9982   0.9992
+## Prevalence             0.2845   0.1935   0.1744   0.1639   0.1838
+## Detection Rate         0.2845   0.1912   0.1733   0.1624   0.1832
+## Detection Prevalence   0.2856   0.1921   0.1760   0.1630   0.1833
+## Balanced Accuracy      0.9992   0.9935   0.9955   0.9950   0.9982
+</code></pre>
+
+<h3>
+<a id="reasone-for-decision" class="anchor" href="#reasone-for-decision" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reasone for decision</h3>
+
+<p>The second model build with random forest can predict with accuracy 0.9944, confidence interval 95%: 0.9925, 09959. Random forest model achieves much better accuracy in comparison with the decision tree model tested above.</p>
+
+<h3>
+<a id="expected-out-of-sample-error" class="anchor" href="#expected-out-of-sample-error" aria-hidden="true"><span class="octicon octicon-link"></span></a>Expected out of sample error</h3>
+
+<p>When we use random forest model the expected out-of-sample error is around 0.5% and is calculated as 1 minus accuracy for predictions made against the cross-validation set. </p>
+
+<h3>
+<a id="cross-validation" class="anchor" href="#cross-validation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cross-validation</h3>
+
+<p>To perform a Cross-validation the training data set split into 2 sets: SubTraining (60%) and SubTesting (40%). The model is fitted in SubTraining data set and tested SubTesting data set. The random forest model gave an accuracy above 99% on cross-validation data (SubTesting data set). It means that in Testing Data set out of 20 test cases only very few or none of the cases will be wrong.</p>
+
+<h3>
+<a id="predict-20-different-test-cases" class="anchor" href="#predict-20-different-test-cases" aria-hidden="true"><span class="octicon octicon-link"></span></a>Predict 20 different test cases</h3>
+
+<pre><code># 1. Remove columns that containes more then &gt; 95% of  NAs
+TestingData&lt;-TestingData[ , ! apply(TestingData , 2 , function(x)
+      sum(is.na(x))/nrow(TestingData) &gt;0.95)]
+# 2. Remove first seven columns that are not relevant for the model (user names, IDs, window).
+TestingData &lt;- subset(TestingData, select = -c(1:7) )
+dim(TestingData)
+</code></pre>
+
+<pre><code>## [1] 20 53
+</code></pre>
+
+<pre><code># Predition with the second model - random forest
+PredictTest &lt;- predict(SecondModel, TestingData, type="class")
+PredictTest
+</code></pre>
+
+<pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
+## Levels: A B C D E
+</code></pre>
+
+<h3>
+<a id="submission" class="anchor" href="#submission" aria-hidden="true"><span class="octicon octicon-link"></span></a>Submission</h3>
+
+<pre><code>pml_write_files = function(x){
+  n = length(x)
+  for(i in 1:n){
+    filename = paste0("problem_id_",i,".txt")
+    write.table(x[i],file=filename,quote=FALSE,row.names=FALSE,col.names=FALSE)
+  }
+}
+pml_write_files(PredictTest)
+</code></pre>
+
+<p></p>
+
+<p></p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/olb1605">olb1605</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
